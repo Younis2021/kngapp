@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand Colors */
+  --kng-charcoal: 215 22% 27%;
+  --kng-cream: 35 30% 98%;
+  --kng-gold: 35 41% 57%;
+  --kng-gold-light: 35 41% 67%;
+  --kng-gold-dark: 35 41% 47%;
+  --kng-sand: 35 25% 95%;
+  --kng-stone: 30 10% 92%;
+  
+  /* Theme Colors */
+  --background: 35 30% 98%;
+  --foreground: 215 22% 27%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 215 22% 27%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 215 22% 27%;
+  
+  --primary: 35 41% 57%;
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 30 10% 92%;
+  --secondary-foreground: 215 22% 27%;
+  
+  --muted: 35 25% 95%;
+  --muted-foreground: 215 25% 27%;
+  
+  --accent: 35 41% 97%;
+  --accent-foreground: 215 22% 27%;
+  
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  
+  --border: 35 25% 90%;
+  --input: 35 25% 90%;
+  --ring: 35 41% 57%;
+  
+  --radius: 0.75rem;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for all browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Premium Gradients */
+.gradient-gold {
+  background: linear-gradient(135deg, hsl(35 41% 57%), hsl(35 41% 67%));
+}
+
+.gradient-cream {
+  background: linear-gradient(135deg, hsl(35 30% 98%), hsl(35 25% 95%));
+}
+
+/* Luxury Card */
+.luxury-card {
+  background: white;
+  border: 1px solid hsl(35 25% 90%);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.05),
+    0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.luxury-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.08),
+    0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Premium Button */
+.btn-premium {
+  background: linear-gradient(135deg, hsl(35 41% 57%), hsl(35 41% 67%));
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+/* Stagger children animations */
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+.stagger-children > *:nth-child(7) { animation-delay: 0.7s; }
+.stagger-children > *:nth-child(8) { animation-delay: 0.8s; }
+
+/* Premium Text Styles */
+.heading-premium {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.subheading-premium {
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.6;
+  color: hsl(215 22% 27% / 0.8);
+}
+
+/* Decorative Elements */
+.decorative-line {
+  height: 2px;
+  background: linear-gradient(90deg, 
+    hsl(35 41% 57%), 
+    hsl(35 41% 67%),
+    hsl(35 41% 57%)
+  );
+}
+
+/* Custom Shadows */
+.shadow-premium {
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.06),
+    0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.shadow-premium-hover {
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Hover Effects */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Image Effects */
+.img-premium {
+  filter: brightness(1.02) contrast(1.02);
+  transition: all 0.3s ease;
+}
+
+.img-premium:hover {
+  filter: brightness(1.05) contrast(1.05);
+}
