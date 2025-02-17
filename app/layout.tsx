@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'home buyers near me',
     'sell house as is',
     'cash home buyer',
-    'KNG Home Buyers',
+    'kng home buyers',
     'sell house California',
     'cash offer for house',
     'sell house without realtor',
