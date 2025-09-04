@@ -1,5 +1,5 @@
 export function sendToWhatsApp(formData: any, formType: string = 'Contact') {
-  const phone = "+201013476272"; // Your WhatsApp number
+  const phone = "+1 (323) 608-8328"; // Your WhatsApp number
   let message = "";
 
   // Format message based on form type
