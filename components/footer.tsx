@@ -73,7 +73,7 @@ export function Footer() {
                 <li className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-[hsl(35,41%,57%)]" />
                   <a
-                    href="tel:(555)123-4567"
+                    href="tel:(323)-794-7221"
                     className="text-[hsl(215,22%,27%/0.8)] hover:text-[hsl(35,41%,57%)] transition-colors duration-200"
                   >
                     (323)-794-7221
